@@ -100,11 +100,6 @@ body {
   color: var(--primary-color);
 }
 
-.choices i:first-child {
-  transform: rotate(90deg);
-
-}
-
 .choices i:hover {
   animation-name: choice;
   animation-duration: 0.5s;
