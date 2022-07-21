@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+  --primary-color: #003699;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --lose-color: #dc3545;
+  --win-color: #28a745;
+  --modal-duration: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: '';
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.btn-box {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.restart-btn {
+  display: none;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  color: green;
+  padding: 2rem 8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 30px;
+  font-size: 40px;
+}
+
+.restart-btn:hover {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+  color: #4facfe;
+}
+
+.score {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.score p {
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.score p:first-child {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.score p:last-child {
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.choice {
+  cursor: pointer;
+  color: darkgoldenrod;
+}
+
+.choices i:first-child {
+  transform: rotate(90deg);
+}
+
+
+.choice:hover {
+  color: var(--primary-color);
+}
+
+
+.text-win {
+  color: var(--win-color);
+}
+
+.text-lose {
+  color: var(--lose-color);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: #fff;
+  text-align: center;
+  margin: 10% auto;
+  width: 350px;
+  border-radius: 10px;
+  padding: 3rem;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-content h1 {
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .choice {
+    font-size: 110px;
+  }
+}
+
+@media (max-width: 500px) {
+  .choice {
+    font-size: 80px;
+  }
+}
