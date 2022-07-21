@@ -106,8 +106,8 @@ body {
 }
 
 .choices i:hover {
-  transform: rotate(15deg);
-  transition: ease;
+  animation-name: choice;
+  animation-duration: 0.5s;
 }
 
 
@@ -151,6 +151,15 @@ body {
 .modal-content p {
   font-size: 1.2rem;
   margin-top: 1rem;
+}
+
+@keyframes choice {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
 }
 
 @keyframes modalopen {
