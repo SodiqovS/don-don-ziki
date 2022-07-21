@@ -96,15 +96,18 @@ body {
   color: darkgoldenrod;
 }
 
+.choice:hover {
+  color: var(--primary-color);
+}
+
 .choices i:first-child {
   transform: rotate(90deg);
 }
 
-
-.choice:hover {
-  color: var(--primary-color);
+.choices i:hover {
   transform: rotate(30deg);
 }
+
 
 
 .text-win {
