@@ -103,6 +103,7 @@ body {
 
 .choice:hover {
   color: var(--primary-color);
+  transform: rotate(30deg);
 }
 
 
