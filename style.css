@@ -107,7 +107,8 @@ body {
 
 .choices i:hover {
   transform: rotate(15deg);
-  transition: all cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
 }
 
 
