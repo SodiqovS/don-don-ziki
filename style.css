@@ -107,8 +107,7 @@ body {
 
 .choices i:hover {
   transform: rotate(15deg);
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
+  transition: ease;
 }
 
 
