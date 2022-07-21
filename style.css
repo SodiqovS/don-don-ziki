@@ -102,10 +102,12 @@ body {
 
 .choices i:first-child {
   transform: rotate(90deg);
+
 }
 
 .choices i:hover {
   transform: rotate(15deg);
+  transition: all cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 
